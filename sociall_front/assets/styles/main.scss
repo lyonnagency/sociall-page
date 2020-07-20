@@ -1,0 +1,537 @@
+@import "fonts";
+@import "mixin";
+@import "variables";
+@import "classes";
+body {
+  //overflow-x: hidden;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.text-link-white {
+  .nav-link {
+    color: #F5F5F5 !important;
+  }
+}
+
+.text-coffee {
+  color: $coffee;
+}
+
+.text-link-purple {
+  .nav-link {
+    color: $purple !important;
+    font-family: 'Monserrat';
+    font-weight: 700;
+  }
+}
+
+.track-200 {
+  letter-spacing: 2px;
+}
+
+.track-600 {
+  letter-spacing: 12px;
+}
+
+.ff-monserrat {
+  font-family: 'Monserrat';
+}
+
+.ff-silver-pen {
+  font-family: 'SilverPen';
+}
+
+.ff-gravity {
+  font-family: 'Gravity';
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-9 {
+  font-size: $fs-9;
+  @include sm {
+    font-size: $fs-9;
+  }
+  @include md {
+    font-size: $fs-9 + 1px;
+  }
+}
+
+.fs-11 {
+  @include sm {
+    font-size: $fs-11;
+  }
+  @include md {
+    font-size: $fs-11;
+  }
+}
+
+.fs-12 {
+  font-size: $fs-12 + 1px;
+  @include sm {
+    font-size: $fs-12 + 1px;
+  }
+
+  @include md {
+    font-size: $fs-12 + 4px;
+  }
+}
+
+.fs-14 {
+  font-size: $fs-14;
+  @include sm {
+    font-size: $fs-14 +1px;
+  }
+
+  @include md {
+    font-size: $fs-14 + 3px;
+  }
+}
+
+.fs-16 {
+  font-size: $fs-16;
+  @include sm {
+    font-size: $fs-16 + 1px;
+  }
+  @include md {
+    font-size: $fs-16 + 2px;
+  }
+}
+
+.fs-18 {
+  font-size: $fs-18;
+  @include sm {
+    font-size: $fs-18 + 1px;
+  }
+
+  @include md {
+    font-size: $fs-18 + 3px;
+  }
+}
+
+.fs-20 {
+
+  @include sm {
+    font-size: $fs-20;
+  }
+
+  @include md {
+    font-size: $fs-20;
+  }
+}
+
+.fs-25 {
+  font-size: $fs-25;
+  @include sm {
+    font-size: $fs-25+1px;
+  }
+
+  @include md {
+    font-size: $fs-25 + 3px;
+  }
+}
+
+.fs-60 {
+
+  font-size: $fs-60;
+  @include sm {
+    font-size: $fs-60 + 1px;
+  }
+
+  @include md {
+    font-size: $fs-60 + 3px;
+  }
+}
+
+.fs-88 {
+  font-size: $fs-88;
+  @include sm {
+    font-size: $fs-88;
+  }
+
+  @include md {
+    font-size: $fs-88 + 10px;
+  }
+}
+
+.fs-114 {
+  font-size: $fs-114 - 35px;
+  @include sm {
+    font-size: $fs-114 - 35px;
+  }
+  @include md {
+    font-size: $fs-114;
+  }
+}
+
+.navbar-light {
+  .navbar-nav {
+    height: 100%;
+    @include sm {
+      height: 100%;
+    }
+    @include md {
+      height: 100%;
+    }
+    @include xl {
+      height: 100px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      .nav-link {
+        color: #211915;
+        font-family: 'Monserrat';
+        font-size: $fs-11;
+        position: relative;
+        padding: 15px 2px;
+        @include sm {
+          padding: 15px 0;
+        }
+        @include md {
+          padding: 15px 0;
+        }
+        @include xl {
+          padding: 0 10px;
+        }
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 40%;
+          width: 20%;
+          height: 1px;
+          background: $black-text;
+          content: "";
+          opacity: 0;
+          transition: opacity .3s, -webkit-transform .3s;
+          transition: opacity .3s, transform .3s;
+          transition: opacity .3s, transform .3s, -webkit-transform .3s;
+          -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+        }
+        &:hover:after {
+          opacity: 1;
+          transform: translateY(0);
+
+        }
+      }
+    }
+  }
+}
+
+.social-logo-menu {
+  height: 30px;
+}
+
+.phone-by-left {
+  &:before {
+    content: '';
+    display: block;
+    background-image: url("../img/icos/phone.svg");
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    //left: -5%;
+    position: relative;
+    @include sm {
+      //left: -2%;
+      position: relative;
+    }
+
+    @include md {
+      position: relative;
+      left: -2%;
+    }
+    @include lg {
+      position: relative;
+      left: 0;
+    }
+  }
+}
+
+.extra-padding-{
+  padding: 20px;
+}
+
+.login-ico-right {
+  &:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    background-image: url("../img/icos/login.svg");
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero-home {
+  height: 100%;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  background: url("../img/hero-100.jpg"), linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  //background: url("../img/hero-100.jpg"), white;
+  @include sm {
+    height: 100%;
+  }
+  @include md {
+    height: 54vh;
+    background-position: top;
+  }
+  @include lg {
+    height: 84vh;
+    background-position: unset;
+  }
+
+}
+
+.input-sociall {
+  background-color: white;
+  border-color: transparent;
+  height: 5em;
+  width: 100%;
+  padding: 0 20px;
+  font-family: 'Gravity';
+  font-weight: 500;
+  font-size: $fs-13;
+  @include sm {
+    font-size: $fs-13 + 1px;
+  }
+  @include md {
+    font-size: $fs-13 + 2px;
+  }
+}
+
+.input-sociall-v2 {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-weight: 500;
+  font-size: $fs-13;
+  color: white;
+  @include sm {
+    font-size: $fs-13 + 1px;
+  }
+  @include md {
+    font-size: $fs-13 + 2px;
+  }
+  &:focus {
+    outline-color: transparent;
+  }
+  font-family: 'Monserrat';
+  &::placeholder {
+    font-family: 'Monserrat';
+    font-weight: 500;
+    font-size: $fs-13;
+    color: white;
+    @include sm {
+      font-size: $fs-13 + 1px;
+    }
+    @include md {
+      font-size: $fs-13 + 2px;
+    }
+  }
+}
+
+.section-cards {
+
+}
+
+.card-item {
+  transition: all $time-03s;
+  background-color: white;
+  &:hover {
+    animation-name: shadowCard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes shadowCard {
+  from {
+    -webkit-box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 0.1);
+    -moz-box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 0.1);
+    box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 0.1);
+    z-index: 0;
+    transition: all $time-03s;
+    position: relative;
+    top: 0;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 1);
+    -moz-box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 1);
+    box-shadow: 0px 0px 72px 0px rgba(224, 221, 224, 1);
+    z-index: 5;
+    transition: all $time-03s;
+    position: relative;
+    top: -5vh;
+  }
+}
+
+.logos-agencies {
+  a {
+    img {
+      height: 20px;
+      margin: 0 10px;
+    }
+  }
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: transparent !important;
+}
+
+.light-yellow-home1 {
+  // 0-575px
+  position: absolute;
+  left: calc(60% - 150px);
+  width: 150px;
+  height: 150px;
+  @include sm {
+    left: calc(55% - 150px);
+    top: 0;
+  }
+  @include lg {
+    left: calc(53% - 200px);
+    top: -60%;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.light-purple-home1 {
+  // 0-575px
+  position: absolute;
+  right: calc(60% - 150px);
+  width: 150px;
+  height: 150px;
+  @include sm {
+    right: calc(55% - 150px);
+    top: 0;
+  }
+  @include lg {
+    right: calc(53% - 200px);
+    top: -60%;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.light-yellow-left-home2 {
+  // 0-575px
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  width: 0px;
+  height: 0px;
+  //opacity: 0;
+  @include sm {
+    left: 10%;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+  }
+  @include lg {
+    left: 5%;
+    top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.light-purple-left-home2 {
+  // 0-575px
+  position: absolute;
+  left: -15%;
+  top: -10%;
+  width: 0px;
+  height: 0px;
+  //opacity: 0;
+  @include sm {
+    right: calc(55% - 150px);
+    top: 0;
+    width: 250px;
+    height: 250px;
+  }
+  @include lg {
+    right: calc(53% - 200px);
+    top: 0;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.light-yellow-right-home2 {
+  // 0-575px
+  position: absolute;
+  right: -15%;
+  top: -15%;
+  width: 250px;
+  height: 250px;
+  @include sm {
+    right: -15%;
+    top: -10%;
+  }
+  @include lg {
+    right: -10%;
+    top: -20%;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.light-purple-right-home2 {
+  // 0-575px
+  position: absolute;
+  right: 35%;
+  top: -5%;
+  width: 180px;
+  height: 180px;
+  @include sm {
+    right: 0;
+    top: 20%;
+  }
+  @include lg {
+    right: 10%;
+    top: 10%;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.nav-link-img{
+  a{
+    &:after{
+      content: none!important;
+    }
+  }
+}
+
+.floating-card{
+    animation-name: shadowCard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navbar-toggler{
+  span.navbar-toggler-icon{
+    background-image: url("../img/icos/menu.svg") !important;
+  }
+
+}
+
+@import "responsive";

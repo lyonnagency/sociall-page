@@ -1,0 +1,392 @@
+@import "mixin";
+
+.ico-menu-sociall-md {
+  position: relative !important;
+  right: calc(50% - 45px);
+  top: 20%;
+  width: 90px;
+  height: 40px;
+}
+
+.input-sociall {
+
+}
+
+.color-yellow {
+  color: $coffee !important;
+}
+
+.color-purple {
+  color: $purple !important;
+}
+
+.color-purple-link {
+  a {
+    color: $purple !important;
+  }
+}
+
+.color-gray {
+  color: $graySociall !important;
+}
+
+.btn-social {
+  width: 100%;
+  height: 100%;
+  font-family: 'Monserrat';
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  padding: 0;
+}
+
+.btn-purple {
+  background-color: $purple;
+  color: white;
+}
+
+.vengalas-sm {
+  width: 25px;
+  @include sm {
+    width: 25px;
+  }
+  @include md {
+    width: 35px;
+  }
+}
+
+.light-yellow {
+  background-image: url("../img/icos/light-yellow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.light-purple {
+  background-image: url("../img/icos/light-purple.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.9;
+
+}
+
+.titles-perfect-event {
+  position: relative;
+}
+
+.light-flashing {
+  width: 20em;
+  height: 20em;
+  animation-name: flashing;
+  animation-iteration-count: infinite;
+  //animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flashing {
+  from {
+    transform: translate(-8%);
+  }
+  to {
+    transform: translate(8%);
+  }
+}
+
+.card-image {
+  background-image: url("../img/home-1-100.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 45vh;
+  @include sm {
+    height: auto;
+  }
+  @include md {
+    height: auto;
+  }
+  @include lg {
+    height: auto;
+  }
+}
+
+.title-list-h5 {
+  height: 4rem;
+
+  @include sm {
+    height: 3em;
+  }
+
+  @include md {
+    height: 4em;
+  }
+
+  @include lg {
+    height: 3.5em;
+  }
+
+  @include xl {
+    height: 3em;
+  }
+}
+
+ul.list-sociall {
+  padding-left: 0;
+}
+
+.list-item-soc {
+  list-style: none;
+  position: relative;
+  &:before {
+    content: '\2022';
+    position: absolute;
+    display: inline-block;
+    left: -20px;
+    top: -5px;
+    font-size: $fs-16;
+  }
+}
+
+.color-list-yellow {
+  &:before {
+    color: $coffee !important;
+  }
+}
+
+.color-list-purple {
+  &:before {
+    color: $purple !important;
+  }
+}
+
+.btn-move-inside {
+  transition: all $time-03s;
+  display: inline-block;
+  div {
+    position: relative;
+    transition: all $time-03s;
+    display: inline-block;
+  }
+  &:hover {
+    div {
+      margin-left: 2%;
+      display: inline-block;
+      transition: all $time-03s;
+    }
+  }
+}
+
+.footer-down {
+  border-top: 1px solid $graySociall;
+}
+
+.social-logo-footer {
+  width: 100%;
+  @include sm {
+    width: 60%;
+  }
+
+  @include md {
+    width: 80%;
+  }
+}
+
+.icos-footer-social {
+  a {
+    text-align: center;
+    padding: 0 !important;
+    img {
+      height: 20px;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+    @include md {
+      text-align: right;
+    }
+
+    .facebook {
+      width: 12px;
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../img/icos/arrow-down.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  background-image: url("../img/icos/arrow-down.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+
+}
+
+.is-invalid {
+  outline-color: red !important;
+  border: 1px solid red!important;
+}
+.success-send-event{
+  background-color: rgba(100,100,100,0.6);
+}
+
+.contact-simple-sociall {
+  background-blend-mode: multiply;
+  background: url("../img/back-contact-simple-full.jpg") center no-repeat, rgba(0, 0, 0, 0.8);
+  height: 35vh;
+  @include sm {
+    height: 40vh;
+  }
+
+  @include md {
+    height: 30vh;
+  }
+  @include lg {
+    height: 35vh;
+  }
+}
+
+.background-parallax {
+
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  @include md {
+    background-attachment: fixed !important;
+  }
+
+}
+
+.hvr-ripple-out {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+
+  }
+  &:hover:before {
+    animation-name: ripple-out;
+  }
+}
+
+.before-morado-border {
+  &:hover:before {
+    border: $purple solid 6px;
+    opacity: 0.7;
+  }
+}
+
+@keyframes ripple-out {
+  from {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  to {
+    top: -10%;
+    right: -2%;
+    bottom: -10%;
+    left: -2%;
+    opacity: 0.1;
+  }
+}
+
+.line-h-40 {
+  line-height: 40px;
+}
+
+.toggle-menu-user {
+  transform: scaleY(0);
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  background-color: white!important;
+  top: 190%;
+
+}
+
+.toggle-menu-user.showed {
+  animation-name: show-menu-user;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  height: 200%;
+  z-index: 10;
+}
+
+.toggle-menu-user.hiddenMenu {
+  animation-name: hide-menu-user;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes show-menu-user {
+  from {
+    transform: scaleY(0);
+    height: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-menu-user {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+  }
+  to {
+    transform: scaleY(0);
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.whats-button{
+  background-color: transparent;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 20px;
+  transition: background-color $time-03s;
+  &:hover{
+    text-decoration: none;
+    background-color: rgba(100,100,100,0.5);
+  }
+}
+
